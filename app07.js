@@ -102,8 +102,21 @@ $('#add-new-entry-button').on("click", function() {
 $(document).on("click", "#maps", function() {
 
 
+//  38.58 and -121.505 UC Davis Extension
+
+
 function initMap() {
-        var uluru = {lat: +38.33, lng: -121.33};
+        x = $("#lat").val();
+        y = $("#lon").val();
+        x = Number(x);
+        y = Number(y);
+
+        console.log(x);
+        console.log(y);
+
+        
+
+        var uluru = {lat: x, lng: y};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: uluru
